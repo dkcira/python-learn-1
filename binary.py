@@ -1,14 +1,14 @@
 
-print 0b1,    #1
-print 0b10,   #2
-print 0b11,   #3
-print 0b100,  #4
-print 0b101,  #5
-print 0b110,  #6
-print 0b111   #7
-print "******"
-print 0b1 + 0b11
-print 0b11 * 0b11
+print(0b1, end=' ')    #1
+print(0b10, end=' ')   #2
+print(0b11, end=' ')   #3
+print(0b100, end=' ')  #4
+print(0b101, end=' ')  #5
+print(0b110, end=' ')  #6
+print(0b111)   #7
+print("******")
+print(0b1 + 0b11)
+print(0b11 * 0b11)
 
 
 # 2**0 = 1
@@ -56,7 +56,7 @@ twelve = 0b1100
 # Return the hexadecimal representation of an integer or long integer.
 
 for i in range(1,6):
-        print i, bin(i)
+        print(i, bin(i))
 # 1 0b1
 # 2 0b10
 # 3 0b11
@@ -77,13 +77,13 @@ int("110", 2)
 
 
 
-print int("1",2)
-print int("10",2)
-print int("111",2)
-print int("0b100",2)
-print int(bin(5),2)
+print(int("1",2))
+print(int("10",2))
+print(int("111",2))
+print(int("0b100",2))
+print(int(bin(5),2))
 # Print out the decimal equivalent of the binary 11001001.
-print int("11001001",2)
+print(int("11001001",2))
 
 
 
@@ -91,12 +91,12 @@ print int("11001001",2)
 # The next two operations we are going to talk about are the left and right shift bitwise operators. These operators work by shifting the bits of a number over by a designated number of slots.
 # The block below shows how these operators work on the bit level. Note that in the diagram, the shift is always a positive integer:
 # Left Bit Shift (<<)  
-0b000001 << 2 == 0b000100 (1 << 2 = 4)
-0b000101 << 3 == 0b101000 (5 << 3 = 40)       
+0b000001 << 2 == 0b000100 # (1 << 2 = 4)
+0b000101 << 3 == 0b101000 # (5 << 3 = 40)       
 
 # Right Bit Shift (>>)
-0b0010100 >> 3 == 0b000010 (20 >> 3 = 2)
-0b0000010 >> 2 == 0b000000 (2 >> 2 = 0) 
+0b0010100 >> 3 == 0b000010 # (20 >> 3 = 2)
+0b0000010 >> 2 == 0b000000 # (2 >> 2 = 0) 
 
 # This operation is mathematically equivalent to floor dividing and multiplying by 2 (respectively) for every time you shift, but it's often easier just to think of it as shifting all the 1s and 0s left or right by the specified number of slots.
 # Note that you can only do bitwise operations on an integer. Trying to do them on strings or floats will result in nonsensical output!
@@ -106,8 +106,8 @@ shift_left = 0b1
 # Your code here!
 shift_right >> 2
 shift_left << 2
-print bin(shift_right)
-print bin(shift_left)
+print(bin(shift_right))
+print(bin(shift_left))
 
 
 # A BIT of This AND That
@@ -119,18 +119,18 @@ print bin(shift_left)
 # As you can see, the 2's bit and the 8's bit are the only bits that are on in both a and b, so a & b only contains those bits. Note that using the & operator can only result in a number that is less than or equal to the smaller of the two values.
 # So remember, for every given bit in a and b:
 
-0 & 0 = 0
-0 & 1 = 0
-1 & 0 = 0
-1 & 1 = 1
+0 & 0 == 0
+0 & 1 == 0
+1 & 0 == 0
+1 & 1 == 1
 # Therefore,
- 0b111 (7) & 0b1010 (10) = 0b10
+0b111 & 0b1010 == 0b10 # (7) & (10)
 # which equals two.
 
 # Instructions
 # print out the result of calling bin() on 0b1110 & 0b101.
 # See if you can guess what the output will be!
-print bin(0b1110 & 0b101)
+print(bin(0b1110 & 0b101))
 
 # A BIT of This OR That
 # The bitwise OR (|) operator compares two numbers on a bit level and returns a number where the bits of that number are turned on if either of the corresponding bits of either number are 1. For example:
@@ -140,14 +140,14 @@ print bin(0b1110 & 0b101)
 # a | b:  00101111  47
 # Note that the bitwise | operator can only create results that are greater than or equal to the larger of the two integer inputs.
 # So remember, for every given bit in a and b:
-0 | 0 = 0
-0 | 1 = 1 
-1 | 0 = 1
-1 | 1 = 1
+0 | 0 == 0
+0 | 1 == 1 
+1 | 0 == 1
+1 | 1 == 1
 # Meaning
- 110 (6) | 1010 (10) = 1110 (14)
+110 | 1010 == 1110 # (6) | (10) = (14)
 
-print bin(0b1110 | 0b101)
+print(bin(0b1110 | 0b101))
 
 
 
@@ -162,14 +162,14 @@ print bin(0b1110 | 0b101)
 # a ^ b:  00100101   37
 # Keep in mind that if a bit is off in both numbers, it stays off in the result. Note that XOR-ing a number with itself will always result in 0.
 # So remember, for every given bit in a and b:
-0 ^ 0 = 0
-0 ^ 1 = 1
-1 ^ 0 = 1
-1 ^ 1 = 0
+0 ^ 0 == 0
+0 ^ 1 == 1
+1 ^ 0 == 1
+1 ^ 1 == 0
 # Therefore:
- 111 (7) ^ 1010 (10) = 1101 (13)
+111 ^ 1010 == 1101 # (7) ^ (10) = (13)
 
-print bin(0b1110 ^ 0b101)
+print(bin(0b1110 ^ 0b101))
 
 
 
@@ -178,11 +178,11 @@ print bin(0b1110 ^ 0b101)
 # See? This is NOT That Hard!
 # The bitwise NOT operator (~) just flips all of the bits in a single number. What this actually means to the computer is actually very complicated, so we're not going to get into it. Just know that mathematically, this is equivalent to adding one to the number and then making it negative.
 # And with that, you've seen all of the basic bitwise operators! We'll see what we can do with these in the next section.
-print ~1 # -2
-print ~2 # -3
-print ~3 # -4
-print ~42 # -43
-print ~123 # -124
+print(~1) # -2
+print(~2) # -3
+print(~3) # -4
+print(~42) # -43
+print(~123) # -124
 
 
 
@@ -192,7 +192,7 @@ num  = 0b1100
 mask = 0b0100
 desired = num & mask
 if desired > 0:
-    print "Bit was on"
+    print("Bit was on")
 # In the example above, we want to see if the third bit from the right is on.
 
 # First, we first create a variable num containing the number 12, or 0b1100.
@@ -218,7 +218,7 @@ desired =  a | mask # 0b111, or 7
 # In the editor is a variable, a. Use a bitmask and the value a in order to achieve a result where the third bit from the right of a is turned on. Be sure to print your answer as a bin() string!
 a = 0b10111011
 bitmask = 0b100
-print bin(a | bitmask)
+print(bin(a | bitmask))
 
 
 # Just Flip Out
@@ -231,7 +231,7 @@ desired =  a ^ mask # 0b1
 # In the editor is the 8 bit variable a. Use a bitmask and the value a in order to achieve a result where all of the bits in a are flipped. Be sure to print your answer as a bin() string!
 a     = 0b11101110
 mask = 0b11111111
-print bin(a^mask)
+print(bin(a^mask))
 
 
 # Slip and Slide
