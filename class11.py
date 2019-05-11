@@ -35,7 +35,7 @@ my_car = ElectricCar("molten salt")
 my_car.model = "Elantra"
 my_car.color = "Gray"
 my_car.mpg = 40
-print my_car.condition
+print(my_car.condition)
 my_car.drive_car()
-print my_car.condition
+print(my_car.condition)
 

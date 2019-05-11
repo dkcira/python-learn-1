@@ -16,8 +16,8 @@ class Animal(object):
         self.age = age
     # Add your method here!
     def description(self):
-        print self.name
-        print self.age
+        print(self.name)
+        print(self.age)
 
 hippo = Animal("Hippo",3)
 hippo.description()
@@ -25,7 +25,7 @@ hippo.description()
 sloth = Animal("Sloth", 4)
 ocelot = Animal("Ocelot", 3)
 
-print hippo.health
-print sloth.health
-print ocelot.health
+print(hippo.health)
+print(sloth.health)
+print(ocelot.health)
 

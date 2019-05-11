@@ -21,4 +21,4 @@ class Point3D(object):
         return "(%d, %d, %d)" % (self.x, self.y, self.z)
 
 my_point = Point3D(1,2,3)
-print my_point
+print(my_point)
