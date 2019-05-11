@@ -7,11 +7,11 @@ guesses_left = 3
 # Start your game!
 while guesses_left >  0:
     num = randint(1, 6)
-    guess = int(raw_input("Your guess:"))
+    guess = int(input("Your guess:"))
     if guess == num:
-        print "You win!"
+        print("You win!")
         break
     guesses_left -= 1
 else:
-    print "Sorry, you lose!"
+    print("Sorry, you lose!")
 
