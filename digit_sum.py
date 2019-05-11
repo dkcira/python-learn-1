@@ -9,3 +9,8 @@ def digit_sum(n):
 
 # If you're looking for a challenge, try this: to get the rightmost digit of a number, you can modulo (%) the number by 10. To remove the rightmost digit you can floor divide (//) the number by 10. (Don't worry if you're not familiar with floor division—you can look up the documentation here. Remember, this is a challenge!)
 # Try working this into a pattern to isolate all of the digits and add them to a total.
+
+if __name__ == "__main__":
+    the_number=9834
+    print('the number:', the_number)
+    print('sum of digits:', digit_sum(the_number))
