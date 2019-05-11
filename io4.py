@@ -11,6 +11,8 @@
 #     # Read or write to the file
 # Instructions
 # Check out the example in the editor. Note that we don't explicitly close() our file, and remember that if we don't close a file, our data will get stuck in the buffer. Click Save & Submit Code and check out text.txt to see the results.
+filename = "text.txt"
+print(f'creating file {filename} to write a message')
 with open("text.txt", "w") as textfile:
 	textfile.write("Success!")
 
