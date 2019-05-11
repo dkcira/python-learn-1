@@ -13,5 +13,13 @@ def censor(text, word):
     for i in range(len(stext)):
         if stext[i] == word:
             stext[i] = "*" * wl
-    print " ".join(stext)
+    print(" ".join(stext))
     return " ".join(stext)
+
+if __name__ == '__main__':
+    test_text = "this hack is wack hack"
+    to_mask = 'hack'
+    print('original:', test_text)
+    print('word to mask:', to_mask)
+    print('censored:')
+    censor(test_text, to_mask)
