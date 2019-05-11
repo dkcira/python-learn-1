@@ -18,9 +18,10 @@
 # If that's the case, call .close() on it.
 # (You don't need an else here, since your if statement should do nothing if .closed is True.)
 # After your if statement, print out the value of my_file.closed to make sure your file is really closed.
+filename = "text.txt"
+print(f'open file {filename} to write, then close it')
 with open("text.txt", "w") as my_file:
     my_file.write("any data")
     if not my_file.closed:
         my_file.close()
-
-print my_file.closed
+print(my_file.closed)
