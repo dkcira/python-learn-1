@@ -21,3 +21,8 @@ def is_prime(x):
         n = n + 1
     else:
         return True
+
+
+if __name__ == "__main__":
+    n=23
+    print(f'is {n} int? {is_prime(n)}')
