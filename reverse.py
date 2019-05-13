@@ -4,5 +4,8 @@ def reverse(text):
     for i in range(nl):
         #print text[nl-i-1],
         newstring += text[nl-i-1]
-    print newstring
     return newstring
+
+if __name__ == "__main__":
+    text = "this is just a test"
+    print(f'text: {text}, reversed: {reverse(text)}')
