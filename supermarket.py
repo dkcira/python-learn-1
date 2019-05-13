@@ -26,5 +26,6 @@ def compute_bill(food):
     return total
 
 #
-compute_bill(shopping_list)
+print('shopping list:', shopping_list)
+print('bill:', compute_bill(shopping_list))
 
