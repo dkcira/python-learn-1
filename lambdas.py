@@ -9,13 +9,13 @@
 # When we pass the lambda to filter, filter uses the lambda to determine what to filter, and the second argument (my_list, which is just the numbers 0 – 15) is the list it does the filtering on.
 
 languages = ["HTML", "JavaScript", "Python", "Ruby"]
-print filter(lambda x: x == "Python", languages)
+print([x for x in languages if x == "Python"])
 
 squares = [x**2 for x in range(1,11)]
-print filter(lambda a: a>=30 and a<=70, squares)
+print([a for a in squares if a>=30 and a<=70])
 
 
 # We've given you another (slightly different) garbled. Sort it out with a filter() and a lambda.
 garbled = "IXXX aXXmX aXXXnXoXXXXXtXhXeXXXXrX sXXXXeXcXXXrXeXt mXXeXsXXXsXaXXXXXXgXeX!XX"
-message = filter(lambda x: x != "X", garbled)
-print message
+message = [x for x in garbled if x != "X"]
+print(message)
