@@ -22,3 +22,7 @@ def scrabble_score(word):
         c = word[i]
         sum += score[c.lower()]
     return sum
+
+if __name__ == "__main__":
+    word = 'example'
+    print(f'word: {word}, scrabble score: {scrabble_score(word)}')
