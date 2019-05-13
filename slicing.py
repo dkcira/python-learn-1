@@ -1,25 +1,25 @@
 l = [i ** 2 for i in range(1, 11)]
 # Should be [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-print l[2:9:2]
+print(l[2:9:2])
 
-my_list = range(1, 11) # List of numbers 1 - 10
+my_list = list(range(1, 11)) # List of numbers 1 - 10
 # print all odd elements. default start index = 0, default end index = last, default stride = 1
-print my_list[::2]
+print(my_list[::2])
 
 
 # negative stride processes left-to-right
 letters = ['A', 'B', 'C', 'D', 'E']
-print letters[::-1]
+print(letters[::-1])
 
-my_list = range(1, 11)
+my_list = list(range(1, 11))
 # Create a variable called backwards and set it equal to the reversed version of my_list.
 backwards = my_list[::-1]
 
 
-to_one_hundred = range(101)
+to_one_hundred = list(range(101))
 # Add your code below!
 backwards_by_tens = to_one_hundred[::-10]
-print backwards_by_tens
+print(backwards_by_tens)
 
 
 to_21 = [i for i in range(1,22)]
