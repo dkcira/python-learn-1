@@ -1,7 +1,7 @@
 
 def print_grades(grades):
     for grade in grades:
-        print grade
+        print(grade)
 
 def grades_sum(grades):
     total = 0
@@ -28,4 +28,4 @@ def grades_std_deviation(variance):
 
 if __name__ == '__main__':
     grades = [100, 100, 90, 40, 80, 100, 85, 70, 90, 65, 90, 85, 50.5]
-    print grades_variance(grades)
+    print(grades_variance(grades))
